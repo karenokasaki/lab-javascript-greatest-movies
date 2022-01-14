@@ -9,7 +9,12 @@ function getAllDirectors(movies) {
   movies.forEach(movie => {
     allDirectors.push(movie.director)
   });
-  return allDirectors
+
+  let unique = allDirectors.filter((item, pos, ary) => {
+    return !pos || item != ary[pos -1]
+  })
+  console.log(unique)
+  return unique
 }
 getAllDirectors(movies)
 
@@ -91,7 +96,12 @@ function orderAlphabetically(movies) {
 console.log(orderAlphabetically(movies))
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
-function turnHoursToMinutes() {}
+function turnHoursToMinutes() {
+
+
+
+
+}
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
 function bestYearAvg() {}
